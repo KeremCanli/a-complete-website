@@ -13,7 +13,7 @@ const application = express();
 
 // View engine setup.
 application.set("views", path.join(__dirname, "view"));
-application.set("view engine", "jade");
+application.set("view engine", "pug");
 
 application.use(morgan("dev"));
 application.use(express.json());
@@ -39,7 +39,7 @@ application.use((error, request, response, next) => {
   response.locals.error = request.application.get("env") === "development" ? error : {};
   // Render the error page.
   response.status(error.status || 500);
-  response.render("error.jade");
+  response.render("error.pug");
 });
 
 module.exports = application;

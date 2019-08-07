@@ -4,7 +4,7 @@ const Reference = require("../model/Reference.js");
 const router = express.Router();
 
 router.get("/", (request, response, next) => {
-  response.render("reference.jade", {
+  response.render("reference.pug", {
     title: "Referanslar"
   });
 });

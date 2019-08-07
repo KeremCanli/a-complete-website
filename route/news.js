@@ -4,13 +4,13 @@ const News = require("../model/News.js");
 const router = express.Router();
 
 router.get("/", (request, response, next) => {
-  response.render("news.jade", {
+  response.render("news.pug", {
     title: "Haberler"
   });
 });
 
 router.get("/detail/:id", (request, response, next) => {
-  response.render("newsDetail.jade", {
+  response.render("newsDetail.pug", {
     title: request.params.id + " ID'li Haber"
   });
 });

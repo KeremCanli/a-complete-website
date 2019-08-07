@@ -4,7 +4,7 @@ const Contact = require("../model/Contact.js");
 const router = express.Router();
 
 router.get("/", (request, response, next) => {
-  response.render("contact.jade", {
+  response.render("contact.pug", {
     title: "İletişim"
   });
 });
