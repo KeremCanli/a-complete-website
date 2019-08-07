@@ -1,0 +1,11 @@
+extends layout
+block append content
+  div(ng-app="news" ng-controller="news" ng-cloak)  
+    div(ng-repeat="element in data")
+      a(href="http://localhost:3000/news/detail/{{element._id}}")
+        h1(ng-bind="element.title")
+      p(ng-bind="element.description")
+      span(ng-bind="element.author")
+      time(datetime="{{element.createdAt}}" ng-bind="element.createdAt")
+  script(src="/javascript/module/news.js")
+  script(src="/javascript/controller/news.js")

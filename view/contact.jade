@@ -1,0 +1,29 @@
+extends layout
+block append content
+  div(ng-app="contact" ng-controller="contact" ng-cloak)
+    form(name="contact")
+      label
+        |*Ad: 
+        input(type="text" ng-model="name" required)
+      br
+      label
+        |*Soyad: 
+        input(type="text" ng-model="surname" required)
+      br
+      label
+        |*E-posta: 
+        input(type="email" ng-model="email" required)
+      br
+      label
+        |Telefon: 
+        input(type="tel" ng-model="phone")
+      br
+      label
+        |*Mesaj: 
+        textarea(cols="30" rows="10" ng-model="message" required)
+      br
+      input(type="submit" value="Gönder" ng-click="submit(contact.$valid)")
+      br
+      p(ng-bind="data")
+  script(src="/javascript/module/contact.js")
+  script(src="/javascript/controller/contact.js")

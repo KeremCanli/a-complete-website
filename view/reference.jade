@@ -1,0 +1,8 @@
+extends layout
+block append content
+  div(ng-app="reference" ng-controller="reference" ng-cloak)
+    div(ng-repeat="element in data")
+      img(ng-src="{{element.url}}" alt="{{element.title}}" width="300" height="300")
+      span(ng-bind="element.title")
+  script(src="/javascript/module/reference.js")
+  script(src="/javascript/controller/reference.js")

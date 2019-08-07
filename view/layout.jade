@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title=title
+    link(href="/image/favicon.ico" rel="icon" type="image/x-icon")
+    block cascadingStyleSheets
+      link(href="/cascading-style-sheets/normalize.css" rel="stylesheet")
+    block javascript
+      script(src="/javascript/angular1.6.9.min.js")
+  body
+    block content
+      -const url="http://localhost:3000/"
+      a(href=url)
+        |Anasayfa
+      br
+      a(href=url+"news")
+        |Haberler
+      br
+      a(href=url+"reference")
+        |Referanslar
+      br
+      a(href=url+"contact")
+        |İletişim
