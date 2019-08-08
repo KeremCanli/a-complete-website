@@ -36,7 +36,3 @@ If Node.js and MongoDB are installed, after using the `npm install` and `npm sta
 | /contact | `GET` | Empty | Get the contact page. |
 | /contact/api | `POST` | {<br/> &nbsp;&nbsp;&nbsp;"name": "...",<br/> &nbsp;&nbsp;&nbsp;"surname": "...",<br/> &nbsp;&nbsp;&nbsp;"email": "...",<br/> &nbsp;&nbsp;&nbsp;"phone": ...,<br/> &nbsp;&nbsp;&nbsp;"message": "..."<br/>} | Insert a contact. |
 | /contact/api | `GET` | Empty | Get all contact. |
-
-
-# Demo
-[Live demo on Heroku](https://a-complete-website.herokuapp.com)
